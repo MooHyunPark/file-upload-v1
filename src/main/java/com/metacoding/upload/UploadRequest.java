@@ -15,4 +15,15 @@ public class UploadRequest {
             return Upload.builder().username(this.username).profileUrl(profileUrl).build();
         }
     }
+
+    @Data
+    public static class V2DTO {
+        private String username;
+        private String img;
+
+        public Upload toEntity(String profileUrl) {
+
+            return Upload.builder().username(this.username).profileUrl(profileUrl).build();
+        }
+    }
 }
